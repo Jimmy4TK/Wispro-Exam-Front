@@ -1,0 +1,39 @@
+.menu_div {
+    height: 100%;
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+  
+  .menu_section {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .menu_item {
+    text-align: left;
+  }
+  .navlink {
+    text-decoration: none;
+    margin-top: 13px;
+    color: gray;
+  }
+  .navlink:hover {
+    color: rgb(80, 80, 80);
+  }
+  .btn-circle {
+    width: 35px !important;
+    height: 35px !important;
+    padding: 1px 1px !important;
+    border-radius: 25px !important;
+    font-size: 23px !important;
+    text-align: center !important;
+  }
+  .dropmenu {
+    top:75% !important;
+    right: 10% !important;
+    left: -150% !important;
+    
+  }
+  .dropdown-toggle::after{
+    display: none !important;
+  }
