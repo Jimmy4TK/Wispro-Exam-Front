@@ -5,6 +5,7 @@ import { useErrorHandler } from "../common/utils/ErrorHandler"
 import { listReject } from "./ispService"
 import { useSessionIsp } from "../store/ispStore"
 import RequestTable from "./Request"
+import { Container, Table } from "react-bootstrap"
 
 export default function ListRejectRequest() {
     const isp = useSessionIsp()
@@ -28,7 +29,22 @@ export default function ListRejectRequest() {
     }
     return (
         <GlobalContent>
-            {userservices?.userservices.map((userservice)=>(renderRequest(userservice.id,userservice.service_id,userservice.user_id, userservice.status, isp!.id)))}
+            <Container className="mt-5">
+                <Table variant="dark" striped bordered hover>
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Service ID</td>
+                            <td>User ID</td>
+                            <td>Estado</td>
+                            <td>Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {userservices?.userservices.map((userservice)=>(renderRequest(userservice.id,userservice.service_id,userservice.user_id, userservice.status, isp!.id)))}
+                    </tbody>
+                </Table>
+            </Container>
         </GlobalContent >
     )
 }

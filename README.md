@@ -12,5 +12,5 @@
 
 ## Logeando como Usuario en el apartado Service, podra realizar una petición de servicio
 
-## Logeando como Isp puede Crear un nuevo Service, checkear las solicitudes rechazadas el ultimo mes y las solicitudes pendientes
+## Logeando como Isp puede Crear un nuevo Service (las funcionalidades de ver las solicitudes pendientes y las rechazadas el ultimo mes no funcionan porque no logre hacer que salgan las request)
 

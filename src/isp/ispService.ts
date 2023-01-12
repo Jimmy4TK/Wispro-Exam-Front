@@ -48,22 +48,14 @@ export async function loginisp(params: {
   return res
 }
 
-export async function listRequest(isp_id:number):Promise<UserServices> {
-  try {
-    const res = (
-      await axios.get(http.backendUrl + "isps/"+isp_id+"/list_request")
-    ).data as UserServices
+export async function listRequest(params:{isp_id:number})
+: Promise<UserServices> {
+  const res = (
+    await axios.get(http.backendUrl + "isps/"+params.isp_id+"/list_request")
+  ).data as UserServices
     debugger
-    void reloadCurrentUserServices(res).then()
-    return res
-  } catch (err) {
-    const axiosError = err as AxiosError
-
-    if (axiosError.response && axiosError.response.status === 401) {
-      void logoutisp()
-    }
-    throw err
-  }
+  void reloadCurrentUserServices(res).then()
+  return res
 }
 
 export async function listReject(isp_id:number):Promise<UserServices> {

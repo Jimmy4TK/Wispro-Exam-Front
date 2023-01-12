@@ -4,7 +4,7 @@ import { useState, useLayoutEffect } from "react"
 
 let currentUserServices: UserServices | undefined
 
-const userservicesSubject = new Subject<UserServices| undefined>()
+const userservicesSubject = new Subject<UserServices | undefined>()
 
 export function useSessionUserServices() {
   const [userservices, setUserServices] = useState(currentUserServices)
